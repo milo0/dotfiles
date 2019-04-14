@@ -5,6 +5,9 @@
   let g:ctrlp_map='<c-p>'
   " Change default command
   let g:ctrlp_cmd='CtrlPLastMode'
+  " Modes to be used. You can cycle through modes by pressing Ctrl-f while in
+  " CtrlP Mode
+  let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 "" }}}
 
 "" Plugin: Easymotion {{{
