@@ -4,7 +4,7 @@
   " Change default mapping
   let g:ctrlp_map='<c-p>'
   " Change default command
-  let g:ctrlp_cmd='CtrlP'
+  let g:ctrlp_cmd='CtrlPLastMode'
 "" }}}
 
 "" Plugin: Easymotion {{{
