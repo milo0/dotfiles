@@ -1,98 +1,97 @@
 [include]
-  # include external gitconfig file (requires git 1.7.10+)
-  # typically, user.name and user.email is configured.
-  path = ~/.gitconfig.local
+    # include external gitconfig file (requires git 1.7.10+)
+    # typically, user.name and user.email is configured.
+    path = ~/.gitconfig.local
 [push]
-  # push should only push current branch, not all branches
-  default = current
+    # push should only push current branch, not all branches
+    default = current
 [help]
-  autocorrect = 1
+    autocorrect = 1
 
 [core]
-  editor = vim
-  pager = diff-so-fancy | less --tabs=4 -RFX
+    editor = vim
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [merge]
-  tool = vimdiff
+    tool = vimdiff
 
 [format]
-  pretty = fuller
+    pretty = fuller
 [color]
-  ui = true
-  interactive = auto
+    ui = true
+    interactive = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-  commit = yellow bold
-  meta = yellow
-  frag = magenta bold
-  func = green
-  plain = yellow
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+    commit = yellow bold
+    meta = yellow
+    frag = magenta bold
+    func = green
+    plain = yellow
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [alias]
-  ls      = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-  last    = log -1 HEAD
-  today   = log --since=midnight --color --graph \
-            --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)[%an]%Creset' \
-            --abbrev-commit
-  yesterday = log --since yesterday --until=midnight --color --graph \
-            --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)[%an]%Creset' \
-            --abbrev-commit
-  history = log --graph --pretty=format:'%C(yellow)%h%Creset \
-            -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' \
-            --abbrev-commit --date=short --date-order -n30
-  pulled  = log -p --reverse --no-merges --stat @{1}..
+    ls      = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    last    = log -1 HEAD
+    today   = log --since=midnight --color --graph \
+        --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)[%an]%Creset' \
+        --abbrev-commit
+    yesterday = log --since yesterday --until=midnight --color --graph \
+        --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)[%an]%Creset' \
+        --abbrev-commit
+    history = log --graph --pretty=format:'%C(yellow)%h%Creset \
+        -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' \
+        --abbrev-commit --date=short --date-order -n30
+    pulled  = log -p --reverse --no-merges --stat @{1}..
 
-  remotes = remote -v
-  df      = diff
+    remotes = remote -v
+    df      = diff
 
-  branches = branch -a
-  unstage = reset HEAD --
-  discard = checkout --
-  co      = checkout
-  com     = checkout master
+    branches = branch -a
+    unstage = reset HEAD --
+    discard = checkout --
+    co      = checkout
+    com     = checkout master
 
-  amend   = commit --amend
-  ca      = commit --amend
-  cm      = commit -m
+    amend   = commit --amend
+    ca      = commit --amend
+    cm      = commit -m
 
-  s       = status --short --branch
-  st      = status
-  sta     = status --short --branch --untracked-files=normal
+    s       = status --short --branch
+    st      = status
+    sta     = status --short --branch --untracked-files=normal
 
-  sync    = !git pull && git push
-  ta      = tag -a
-  tags    = tag -l
+    sync    = !git pull && git push
+    ta      = tag -a
+    tags    = tag -l
 
-# allows: git clone github:rails/rails
 [url "git@github.com:"]
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
-  insteadOf = "github:"
+    insteadOf = "github:"
 [url "git@gist.github.com:"]
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
-  insteadOf = "gist:"
+    insteadOf = "gist:"
 [url "git@heroku.com:"]
-  insteadOf = "heroku:"
+    insteadOf = "heroku:"
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
